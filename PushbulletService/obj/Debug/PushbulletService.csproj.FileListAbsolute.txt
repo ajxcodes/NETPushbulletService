@@ -1,0 +1,5 @@
+C:\Users\alvin_p\Documents\Visual Studio 2012\Projects\PushbulletService\PushbulletService\bin\Debug\PushbulletService.dll
+C:\Users\alvin_p\Documents\Visual Studio 2012\Projects\PushbulletService\PushbulletService\bin\Debug\PushbulletService.pdb
+C:\Users\alvin_p\Documents\Visual Studio 2012\Projects\PushbulletService\PushbulletService\obj\Debug\PushbulletService.csprojResolveAssemblyReference.cache
+C:\Users\alvin_p\Documents\Visual Studio 2012\Projects\PushbulletService\PushbulletService\obj\Debug\PushbulletService.dll
+C:\Users\alvin_p\Documents\Visual Studio 2012\Projects\PushbulletService\PushbulletService\obj\Debug\PushbulletService.pdb
