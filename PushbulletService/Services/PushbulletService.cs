@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PushbulletService.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,15 +19,15 @@ namespace PushbulletService
         /// <param name="message">Notification body</param>
         /// <param name="url">Add a URL to push, leave empty for a note push</param>
         /// <param name="apiKey">API key required to send push to correct user</param>
-        public void PbPush(string title, string message, string url, string apiKey)
+        public void PbPush(Push push, string apiKey)
         {
             WebRequest request = WebRequest.Create("https://api.pushbullet.com/v2/pushes");
 
             request.Method = "POST";
             request.Headers.Add("Authorization", "Bearer " + apiKey);
             request.ContentType = "application/json; charset=UTF-8";
-            string requestString = "{\"body\":\"" + message + "\", \"title\":\"" + title + "\", \"type\":" 
-                + (!string.IsNullOrEmpty(url) ? ("\"link\", \"url\":\"" + url + "\"") : "\"note\"}");
+            string requestString = "{\"body\":\"" + push.Message + "\", \"title\":\"" + push.Title + "\", \"type\":" 
+                + (!string.IsNullOrEmpty(push.URL) ? ("\"link\", \"url\":\"" + push.URL + "\"") : "\"note\"}");
             byte[] buffer = Encoding.GetEncoding("UTF-8").GetBytes(requestString);
             request.ContentLength = buffer.Length;
 
